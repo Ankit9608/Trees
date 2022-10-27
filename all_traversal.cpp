@@ -155,22 +155,3 @@
 //     cout << endl;
 //     return 0;
 // }
-
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
-class node
-{
-public:
-    int data;
-    node *left, *right;
-    node(int val)
-    {
-        data = val;
-        right = NULL;
-        left = NULL;
-    }
-
-} int main()
-{
-}

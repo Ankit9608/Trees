@@ -77,18 +77,18 @@ public:
         right = left = NULL;
     }
 };
-// void leaf(node *root, vector<int> &ans)
-// {
-//     if (!root)
-//         return;
-//     if (root->left == NULL && root->right == NULL)
-//     {
-//         ans.push_back(root->data);
-//         return;
-//     }
-//     leaf(root->left, ans);
-//     leaf(root->right, ans);
-// }
+void leaf(node *root, vector<int> &ans)
+{
+    if (!root)
+        return;
+    if (root->left == NULL && root->right == NULL)
+    {
+        ans.push_back(root->data);
+        return;
+    }
+    leaf(root->left, ans);
+    leaf(root->right, ans);
+}
 // class solution
 // {
 // public:
@@ -136,7 +136,7 @@ int main()
     root->right->right->right->left->right = new node(13);
     root->right->right->right->left->right->right = new node(14);
     vector<int> ans;
-    // leaf(root, ans);
+    leaf(root, ans);
     // for (int i = 0; i < ans.size(); i++)
     //     cout << ans[i] << " ";
     // solution s;
